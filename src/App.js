@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import './App.css';
 
 function App() {
-  const [user, setUser] = useState({});
+  const [classes, setClasses] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
