@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 function Login() {
-    const login = useOutletContext();
+    const context = useOutletContext();
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -17,12 +17,12 @@ function Login() {
 
     function handleLogin(e) {
         e.preventDefault();
-        login();
+        context.login();
     };
 
     return (
         <form onSubmit={handleLogin}>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <div>
                 <input
                     id="email"
@@ -32,7 +32,7 @@ function Login() {
                     onChange={handleChange}
                 />
             </div>
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <div>
                 <input
                     id="password"

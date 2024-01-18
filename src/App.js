@@ -2,11 +2,15 @@ import { useState, useEffect, useContext } from 'react';
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import './App.css';
+import useQuery from './components/useQuery';
 
 function App() {
-  const [classes, setClasses] = useState({});
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [classes, setClasses] = useState([]);
+  const [students, setStudents] = useState([]);
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+  const classesUrl = "http://localhost:4000/classes";
 
   const login = () => {
     setIsLoggedIn(true);
@@ -21,14 +25,23 @@ function App() {
     } else {
       navigate("/login");
     }
-  }, [isLoggedIn])
+  }, [isLoggedIn]);
 
   return (
     <>
       <header className="App-header">
         <NavBar {...{logout}} />
       </header>
-      <Outlet context={login} />
+      <Outlet context={{
+        login,
+        isLoggedIn,
+        classes,
+        setClasses,
+        students,
+        setStudents,
+        users,
+        setUsers
+        }} />
     </>
   );
 }
