@@ -1,9 +1,9 @@
-import App from "../App";
-import Home from "../pages/Home";
-import Login from "../pages/Login";
-import Classes from "../pages/Classes";
-import Reports from "../pages/Reports";
-import ErrorPage from "../pages/ErrorPage";
+import App from "./App";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Classes from "./pages/Classes";
+import Reports from "./pages/Reports";
+import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
     {
