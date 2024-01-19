@@ -8,7 +8,13 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [classes, setClasses] = useState([]);
   const [students, setStudents] = useState([]);
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({
+    "id": 0,
+    "name": "Floyd Benton",
+    "email": "floydbenton@unisure.com",
+    "classes": []
+  });
+  const [userClasses, setUserClasses] = useState([]);
   const navigate = useNavigate();
   const classesUrl = "http://localhost:4000/classes";
 
@@ -39,8 +45,10 @@ function App() {
         setClasses,
         students,
         setStudents,
-        users,
-        setUsers
+        user,
+        setUser,
+        userClasses,
+        setUserClasses
         }} />
     </>
   );

@@ -17,12 +17,20 @@ function Classes() {
         return <ClassCard key={oneClass.id} {...{oneClass, context}} />
     });
 
+    const userClassList = context.userClasses.map(oneClass => {
+        return <li key={oneClass.id}>{oneClass.className}</li>
+    })
+
     return (
         <>
             <main>
                 <h1>Classes Page</h1>
                 <ul>
                     {classesList}
+                </ul>
+                <h2>User's Classes</h2>
+                <ul>
+                    {userClassList}
                 </ul>
             </main>
         </>

@@ -2,7 +2,11 @@ import { useOutletContext } from "react-router-dom";
 
 function ClassCard({ oneClass, context }) {
     function handleClick(e) {
-        console.log(`${oneClass.className} was clicked`);
+        if (!context.userClasses.includes(oneClass)) {
+            console.log(oneClass);
+            console.log(context.userClasses);
+            context.setUserClasses([...context.userClasses, oneClass]);
+        };
     };
 
     return (
