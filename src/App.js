@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import './App.css';
-import useQuery from './components/useQuery';
+import useQuery from './hooks/useQuery';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);

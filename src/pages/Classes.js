@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
+import ClassCard from "../components/ClassCard";
 
 function Classes() {
     const url = "http://localhost:4000/classes";
@@ -13,7 +14,7 @@ function Classes() {
     }, []);
 
     const classesList = context.classes.map(oneClass => {
-        return <li key={oneClass.id}>{oneClass.className}</li>
+        return <ClassCard key={oneClass.id} {...{oneClass, context}} />
     });
 
     return (
