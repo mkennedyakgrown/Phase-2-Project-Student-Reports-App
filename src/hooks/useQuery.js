@@ -11,7 +11,6 @@ function useQuery(url) {
             .then(data => {
                 setData(data);
                 setIsLoaded(true);
-                console.log(data);
             });
     }, [url]);
 

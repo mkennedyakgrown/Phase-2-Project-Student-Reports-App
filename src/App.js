@@ -14,7 +14,40 @@ function App() {
     "email": "floydbenton@unisure.com",
     "classes": []
   });
-  const [userClasses, setUserClasses] = useState([]);
+  const [userClasses, setUserClasses] = useState([
+    {
+      "id": 0,
+      "className": "Ballet 3",
+      "classRoll": [
+        "Maureen Hughes",
+        "Henrietta Bowen",
+        "Michael Jordan",
+        "Erika Mejia",
+        "Tracey Burns",
+        "Head Holmes",
+        "Connie Barron",
+        "Shirley Weber",
+        "Lizzie Harmon",
+        "Griffith Sherman"
+      ]
+    },
+    {
+      "id": 1,
+      "className": "Tap 5",
+      "classRoll": [
+        "Lessie Buckner",
+        "Pope Joseph",
+        "French Talley",
+        "Clay Medina",
+        "Ana Hatfield",
+        "Tania Cantrell",
+        "Augusta Trevino",
+        "Valerie Holman",
+        "Graves David",
+        "Barrera Hartman"
+      ]
+    }
+  ]);
   const navigate = useNavigate();
   const classesUrl = "http://localhost:4000/classes";
 
@@ -32,6 +65,17 @@ function App() {
       navigate("/login");
     }
   }, [isLoggedIn]);
+
+  const query = useQuery();
+
+  useEffect(() => {
+    fetch("http://localhost:4000/classes")
+      .then(r => r.json())
+      .then(data => setClasses(data));
+    fetch("http://localhost:4000/students")
+      .then(r => r.json())
+      .then(data => setStudents(data));
+  }, [])
 
   return (
     <>
