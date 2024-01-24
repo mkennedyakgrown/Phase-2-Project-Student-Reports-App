@@ -12,7 +12,10 @@ function App() {
     "id": 0,
     "name": "Floyd Benton",
     "email": "floydbenton@unisure.com",
-    "classes": []
+    "classes": [
+      "Ballet 3",
+      "Tap 5"
+    ]
   });
   const [userClasses, setUserClasses] = useState([
     {

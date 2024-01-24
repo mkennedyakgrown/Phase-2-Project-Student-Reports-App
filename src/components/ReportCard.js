@@ -1,17 +1,24 @@
 
 
-function ReportCard({ name, className, value, handleChange }) {
+function ReportCard({ entry, index, handleChange }) {
+    let value = "";
+
+    if (entry.isClass === true) {
+        value = entry.value;
+    } else {
+        value = entry.value.report;
+    }
 
     return (
         <>
-            <label htmlFor={className + name}>{name}</label>
+            <label htmlFor={entry.label}>{entry.name}</label>
             <div>
                 <input
-                    key={className + name.index}
+                    key={entry.key}
                     type="text"
-                    name={className + name}
+                    name={entry.label}
                     value={value || ""}
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e, entry, index)}
                 />
             </div>
         </>

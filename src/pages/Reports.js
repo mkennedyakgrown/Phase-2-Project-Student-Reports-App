@@ -15,57 +15,29 @@ function Reports() {
         userClasses,
         setUserClasses
     } = useOutletContext();
-    const [formData, setFormData] = useState([
-        {
-            id: 0,
-            label: "Name",
-            value: "",
-            isClass: false
-        }
-    ]);
+    const [formData, setFormData] = useState([]);
 
-    const formEntries = [];
     useEffect(() => {
-        setFormData(
-            userClasses?.map(oneClass => {
-                formEntries.push({
-                        key: oneClass.className + oneClass.id,
-                        id: oneClass.id,
-                        label: oneClass.className,
-                        value: "",
-                        isClass: true
-                    });
-                oneClass.classRoll.map(student => {
-                    const studentObj = students?.find(obj => obj.name === student);
-                    const studentReport = studentObj?.classes.find(obj => obj.className === oneClass.className);
-                    const label = oneClass.className + student;
-                    formEntries.push({
-                        key: label,
-                        id: studentObj?.id,
-                        label: label,
-                        value: studentReport,
-                        isClass: false
-                    })
-                })
-                return formEntries;
-            })
-        );
-    }, [userClasses]);
+        fetch("http://localhost:4000/classes")
+          .then(r => r.json())
+          .then(data => setClasses(data));
+        fetch("http://localhost:4000/students")
+          .then(r => r.json())
+          .then(data => setStudents(data));
+      }, []);
 
-    const reports = formData?.map(entry => {
-        return <ReportsForm key={entry.key} {...{
-            entry,
-            handleChange
-        }} />;
-    })
-
-    function handleChange(e, index) {
+    function handleChange(e, entry, index) {
         const data = [...formData];
-        data[index].value = e.target.value;
+        if (entry.isClass === true) {
+            data[index].value = e.target.value;
+        } else {
+            data[index].value.report = e.target.value;
+        }
         setFormData(data);
     };
 
     function handleSubmit(e) {
+        e.preventDefault();
         console.log("Submitted");
     };
 
@@ -75,7 +47,8 @@ function Reports() {
                 <h1>Reports Page</h1>
                 <form onSubmit={handleSubmit}>
                     <button type="submit">Save</button>
-                    {reports}
+                    <br />
+                    {<ReportsForm {...{formData, setFormData, handleChange, userClasses, students}} />}
                     <button type="submit">Save</button>
                 </form>
             </main>
