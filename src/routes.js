@@ -19,10 +19,10 @@ const routes = [
                         path: "/login",
                         element: <Login />
                     },
-                    {
-                        path: "/classes",
-                        element: <Classes />
-                    },
+                    // {
+                    //     path: "/classes",
+                    //     element: <Classes />
+                    // },
                     {
                         path: "/reports",
                         element: <Reports />

@@ -73,8 +73,10 @@ function Reports() {
         <>
             <main>
                 <h1>Reports Page</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
+                    <button type="submit">Save</button>
                     {reports}
+                    <button type="submit">Save</button>
                 </form>
             </main>
         </>

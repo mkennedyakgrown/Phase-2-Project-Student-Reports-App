@@ -10,12 +10,12 @@ function NavBar({ logout }) {
             >
                 Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
                 to="/classes"
                 className="nav-link"
             >
                 Classes
-            </NavLink>
+            </NavLink> */}
             <NavLink
                 to="/reports"
                 className="nav-link"
