@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import ReportsForm from "../components/ReportsForm";
 
+
 function Reports() {
     const {
         login,
@@ -13,18 +14,10 @@ function Reports() {
         user,
         setUser,
         userClasses,
-        setUserClasses
+        setUserClasses,
+        url
     } = useOutletContext();
     const [formData, setFormData] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:4000/classes")
-          .then(r => r.json())
-          .then(data => setClasses(data));
-        fetch("http://localhost:4000/students")
-          .then(r => r.json())
-          .then(data => setStudents(data));
-      }, []);
 
     function handleChange(e, entry, index) {
         const data = [...formData];
@@ -38,7 +31,28 @@ function Reports() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        patchRequest();
         console.log("Submitted");
+    };
+
+    function patchRequest() {
+        console.log(formData);
+        formData.forEach(obj => {
+            if (obj.isClass === false) {
+                const id = obj.id;
+                console.log(obj.name);
+                const report = combineReports(obj, formData);
+                console.log(report);
+            };
+        })
+    };
+
+    function combineReports(obj, formData) {
+        const studentReport = obj.value.report;
+        const currClass = obj.value.className;
+        const classReport = formData.find(entry => entry.label === currClass).value;
+        const combinedReport = `\t${classReport}\n\t${studentReport}`;
+        return combinedReport;
     };
 
     return (

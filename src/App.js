@@ -5,6 +5,7 @@ import './App.css';
 import useQuery from './hooks/useQuery';
 
 function App() {
+  const url = "http://localhost:4000/"
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [classes, setClasses] = useState([]);
   const [students, setStudents] = useState([]);
@@ -72,13 +73,13 @@ function App() {
   const query = useQuery();
 
   useEffect(() => {
-    fetch("http://localhost:4000/classes")
+    fetch(`${url}classes`)
       .then(r => r.json())
       .then(data => setClasses(data));
-    fetch("http://localhost:4000/students")
+    fetch(`${url}students`)
       .then(r => r.json())
       .then(data => setStudents(data));
-  }, [])
+  }, []);
 
   return (
     <>
@@ -95,7 +96,8 @@ function App() {
         user,
         setUser,
         userClasses,
-        setUserClasses
+        setUserClasses,
+        url
         }} />
     </>
   );
