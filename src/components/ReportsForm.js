@@ -9,7 +9,7 @@ function ReportsForm({ formData, setFormData, handleChange, userClasses, student
                     key: oneClass.className + oneClass.id,
                     id: oneClass.id,
                     label: oneClass.className,
-                    value: "",
+                    value: oneClass.report,
                     name: oneClass.className,
                     isClass: true
                 });

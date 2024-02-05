@@ -22,6 +22,7 @@ function App() {
     {
       "id": 0,
       "className": "Ballet 3",
+      "report": "Ballet 3",
       "classRoll": [
         "Maureen Hughes",
         "Henrietta Bowen",

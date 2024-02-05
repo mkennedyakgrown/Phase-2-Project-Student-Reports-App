@@ -40,12 +40,33 @@ function Reports() {
         formData.forEach(obj => {
             if (obj.isClass === false) {
                 const id = obj.id;
-                console.log(obj.name);
-                const report = combineReports(obj, formData);
-                console.log(report);
+                obj.value.classReport = formData.find(entry => entry.label === obj.value.className).value;
+                // const report = combineReports(obj, formData);
+                // console.log(report);
+                makePatchRequest(obj, id);
             };
         })
     };
+
+    function makePatchRequest(obj, id) {
+        fetch(`${url}students/${id}`)
+            .then(r => r.json())
+            .then(data => {
+                let currClass = data.classes.find(oneClass => oneClass.className === obj.value.className);
+                currClass.report = obj.value.report;
+                currClass.classReport = obj.value.classReport;
+                console.log(data);
+                fetch(`${url}students/${id}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(r => r.json())
+                    .then(body => console.log(body));
+            });
+    }
 
     function combineReports(obj, formData) {
         const studentReport = obj.value.report;
