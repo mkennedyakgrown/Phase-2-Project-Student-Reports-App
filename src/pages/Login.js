@@ -4,8 +4,7 @@ import { useOutletContext } from "react-router-dom";
 function Login() {
     const context = useOutletContext();
     const [formData, setFormData] = useState({
-        email: "",
-        password: "",
+        email: ""
     });
 
     function handleChange(e) {
@@ -17,7 +16,7 @@ function Login() {
 
     function handleLogin(e) {
         e.preventDefault();
-        context.login();
+        context.login(formData.email);
     };
 
     return (
@@ -32,7 +31,7 @@ function Login() {
                     onChange={handleChange}
                 />
             </div>
-            <label htmlFor="password">Password</label>
+            {/* <label htmlFor="password">Password</label>
             <div>
                 <input
                     id="password"
@@ -41,7 +40,7 @@ function Login() {
                     value={formData.password}
                     onChange={handleChange}
                 />
-            </div>
+            </div> */}
             <button type="submit">Login</button>
         </form>
     );

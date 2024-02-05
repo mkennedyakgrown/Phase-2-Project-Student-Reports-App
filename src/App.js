@@ -6,58 +6,27 @@ import useQuery from './hooks/useQuery';
 
 function App() {
   const url = "http://localhost:4000/"
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [classes, setClasses] = useState([]);
   const [students, setStudents] = useState([]);
-  const [user, setUser] = useState({
-    "id": 0,
-    "name": "Floyd Benton",
-    "email": "floydbenton@unisure.com",
-    "classes": [
-      "Ballet 3",
-      "Tap 5"
-    ]
-  });
-  const [userClasses, setUserClasses] = useState([
-    {
-      "id": 0,
-      "className": "Ballet 3",
-      "report": "Ballet 3",
-      "classRoll": [
-        "Maureen Hughes",
-        "Henrietta Bowen",
-        "Michael Jordan",
-        "Erika Mejia",
-        "Tracey Burns",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman"
-      ]
-    },
-    {
-      "id": 1,
-      "className": "Tap 5",
-      "classRoll": [
-        "Lessie Buckner",
-        "Pope Joseph",
-        "French Talley",
-        "Clay Medina",
-        "Ana Hatfield",
-        "Tania Cantrell",
-        "Augusta Trevino",
-        "Valerie Holman",
-        "Graves David",
-        "Barrera Hartman"
-      ]
-    }
-  ]);
+  const [user, setUser] = useState({});
+  const [userClasses, setUserClasses] = useState([]);
   const navigate = useNavigate();
   const classesUrl = "http://localhost:4000/classes";
 
-  const login = () => {
-    setIsLoggedIn(true);
+  const login = (email) => {
+    console.log(email);
+    fetch (`${url}instructors?email=${email}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data != []) {
+          console.log(data[0]);
+          setUser(data[0]);
+          const currUserClasses = classes.filter(obj => data[0].classes.includes(obj.className));
+          setUserClasses(currUserClasses);
+          setIsLoggedIn(true);
+        }
+      })
   }
   const logout = () => {
     setIsLoggedIn(false);
