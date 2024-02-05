@@ -43,12 +43,31 @@ function Reports() {
                 obj.value.classReport = formData.find(entry => entry.label === obj.value.className).value;
                 // const report = combineReports(obj, formData);
                 // console.log(report);
-                makePatchRequest(obj, id);
+                makeStudentPatchRequest(obj, id);
             };
+            if (obj.isClass === true) {
+                const id = obj.id;
+                console.log(obj);
+                makeClassPatchRequest(obj, id);
+            }
         })
     };
 
-    function makePatchRequest(obj, id) {
+    function makeClassPatchRequest(obj, id) {
+        fetch(`${url}classes/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                report: obj.value,
+            }),
+        })
+            .then(r => r.json())
+            .then(body => console.log(body));
+    };
+
+    function makeStudentPatchRequest(obj, id) {
         fetch(`${url}students/${id}`)
             .then(r => r.json())
             .then(data => {
@@ -66,7 +85,7 @@ function Reports() {
                     .then(r => r.json())
                     .then(body => console.log(body));
             });
-    }
+    };
 
     function combineReports(obj, formData) {
         const studentReport = obj.value.report;
