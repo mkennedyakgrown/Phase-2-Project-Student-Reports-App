@@ -12,7 +12,7 @@ function useQuery(url) {
         setData(data);
         setIsLoaded(true);
       });
-  }, [url]);
+  }, []);
 
   return { data, isLoaded };
 }

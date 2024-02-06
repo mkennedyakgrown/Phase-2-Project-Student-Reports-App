@@ -6,6 +6,7 @@ function Reports() {
   const {
     login,
     isLoggedIn,
+    setIsLoggedIn,
     classes,
     setClasses,
     students,

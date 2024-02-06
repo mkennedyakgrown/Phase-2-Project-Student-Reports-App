@@ -40,8 +40,6 @@ function App() {
     }
   }, [isLoggedIn]);
 
-  const query = useQuery();
-
   useEffect(() => {
     fetch(`${url}classes`)
       .then((r) => r.json())
@@ -60,6 +58,7 @@ function App() {
         context={{
           login,
           isLoggedIn,
+          setIsLoggedIn,
           classes,
           setClasses,
           students,

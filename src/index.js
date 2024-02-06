@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes.js";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import "semantic-ui-css/semantic.min.css";
 
 const router = createBrowserRouter(routes);
 
