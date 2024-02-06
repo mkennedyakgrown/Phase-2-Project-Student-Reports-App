@@ -3,34 +3,39 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Classes from "./pages/Classes";
 import Reports from "./pages/Reports";
+import Admin from "./pages/Admin";
 import ErrorPage from "./pages/ErrorPage";
 
 const routes = [
-    {
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
         path: "/",
-        element: <App />,
-        errorElement: <ErrorPage />,
+        element: <Home />,
         children: [
-            {
-                path: "/",
-                element: <Home />,
-                children: [
-                    {
-                        path: "/login",
-                        element: <Login />
-                    },
-                    // {
-                    //     path: "/classes",
-                    //     element: <Classes />
-                    // },
-                    {
-                        path: "/reports",
-                        element: <Reports />
-                    }
-                ]
-            }
-        ]
-    }
-]
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          // {
+          //     path: "/classes",
+          //     element: <Classes />
+          // },
+          {
+            path: "/reports",
+            element: <Reports />,
+          },
+          {
+            path: "/admin",
+            element: <Admin />,
+          },
+        ],
+      },
+    ],
+  },
+];
 
-export default routes;  
+export default routes;

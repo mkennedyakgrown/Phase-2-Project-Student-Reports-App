@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar({ logout }) {
+function NavBar({ logout, isAdmin }) {
     return (
         <nav>
             <NavLink
@@ -16,6 +16,15 @@ function NavBar({ logout }) {
             >
                 Classes
             </NavLink> */}
+            {isAdmin && (
+                <NavLink
+                    to="/admin"
+                    className="nav-link"
+                >
+                    Admin
+                </NavLink>
+            )}
+            
             <NavLink
                 to="/reports"
                 className="nav-link"
