@@ -1,8 +1,7 @@
-//Create an Admin page that loads a card for each student, using the StudentCard component
-//and a form to create new classes and add students to them.
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import StudentCard from "../components/StudentCard";
+import AdminSearchStudent from "../components/AdminSearchStudent";
 
 function Admin() {
     const {
@@ -18,16 +17,23 @@ function Admin() {
         setUserClasses,
         url
     } = useOutletContext();
+    const [searchName, setSearchName] = useState("");
 
-    const displayStudents = students.map((student, index) => {
-        return (
-            <StudentCard key={index} {...{student}}/>
-        )
-    })
+    const studentCards = students.filter(student => {
+      if (student.name !== undefined) {
+        return student.name.toLowerCase().includes(searchName.toLowerCase());
+      }
+    });
+
+    const displayStudents = studentCards.map((student, index) => {
+      console.log(student);
+      return <StudentCard key={index} {...{student}}/>;
+    });
     
     return (
         <>
-            {displayStudents}
+          <AdminSearchStudent {...{searchName, setSearchName}} />
+          {displayStudents}
         </>
     )
 }
