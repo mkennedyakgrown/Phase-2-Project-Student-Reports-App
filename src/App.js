@@ -12,7 +12,6 @@ function App() {
   const [user, setUser] = useState({});
   const [userClasses, setUserClasses] = useState([]);
   const navigate = useNavigate();
-  const classesUrl = "http://localhost:4000/classes";
 
   const login = (email) => {
     fetch(`${url}instructors?email=${email}`)

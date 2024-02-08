@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import StudentCard from "../components/StudentCard";
 import AdminSearchStudent from "../components/AdminSearchStudent";
+import AddStudentForm from "../components/AddStudentForm";
 
 function Admin() {
     const {
@@ -19,6 +20,7 @@ function Admin() {
     } = useOutletContext();
     const [searchName, setSearchName] = useState("");
 
+    console.log(students);
     const studentCards = students.filter(student => {
       if (student.name !== undefined) {
         return student.name.toLowerCase().includes(searchName.toLowerCase());
@@ -26,12 +28,12 @@ function Admin() {
     });
 
     const displayStudents = studentCards.map((student, index) => {
-      console.log(student);
       return <StudentCard key={index} {...{student}}/>;
     });
     
     return (
         <>
+          <AddStudentForm {...{classes, students, setStudents, url}} />
           <AdminSearchStudent {...{searchName, setSearchName}} />
           {displayStudents}
         </>
