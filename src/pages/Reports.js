@@ -32,7 +32,6 @@ function Reports() {
   function handleSubmit(e) {
     e.preventDefault();
     patchRequest();
-    console.log("Submitted");
   }
 
   function patchRequest() {

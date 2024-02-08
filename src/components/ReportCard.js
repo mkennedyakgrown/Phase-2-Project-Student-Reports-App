@@ -1,3 +1,6 @@
+import { Input } from "semantic-ui-react";
+import { Label } from "semantic-ui-react";
+
 function ReportCard({ entry, index, handleChange }) {
   let value = "";
 
@@ -9,14 +12,15 @@ function ReportCard({ entry, index, handleChange }) {
 
   return (
     <>
-      <label htmlFor={entry.label}>{entry.name}</label>
+      {entry.isClass ? <Label color="green" ribbon htmlFor={entry.label}>{`Class: ${entry.label}`}</Label> : <Label pointing="below" htmlFor={entry.label}>{entry.name}</Label>}
       <div>
-        <input
+        <Input
           key={entry.key}
           type="text"
           name={entry.label}
           value={value || ""}
           onChange={(e) => handleChange(e, entry, index)}
+          fluid
         />
       </div>
     </>
