@@ -5,12 +5,12 @@ function ReportsForm({
   formData,
   setFormData,
   handleChange,
-  userClasses,
+  classes,
   students,
 }) {
   const formEntries = [];
   useEffect(() => {
-    userClasses?.forEach((oneClass) => {
+    classes?.forEach((oneClass) => {
       formEntries.push({
         key: oneClass.className + oneClass.id,
         id: oneClass.id,
@@ -37,7 +37,7 @@ function ReportsForm({
       });
     });
     setFormData(formEntries);
-  }, [userClasses]);
+  }, [classes]);
 
   const reports = formData?.map((entry, index) => {
     return (

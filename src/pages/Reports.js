@@ -119,7 +119,7 @@ function Reports() {
                 formData,
                 setFormData,
                 handleChange,
-                userClasses,
+                classes,
                 students,
               }}
             />
