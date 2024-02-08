@@ -43,8 +43,6 @@ function Reports() {
         obj.value.classReport = formData.find(
           (entry) => entry.label === obj.value.className
         ).value;
-        // const report = combineReports(obj, formData);
-        // console.log(report);
         makeStudentPatchRequest(obj, id);
       }
       if (obj.isClass === true) {
@@ -70,26 +68,44 @@ function Reports() {
   }
 
   function makeStudentPatchRequest(obj, id) {
-    fetch(`${url}students/${id}`)
+    const currStudent = students.find(student => student.id === id);
+    let currClass = currStudent.classes.find(
+      (oneClass) => oneClass.className === obj.value.className
+    );
+    currClass.report = obj.value.report;
+    currClass.classReport = obj.value.classReport;
+    fetch(`${url}students/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(currStudent),
+    })
       .then((r) => r.json())
-      .then((data) => {
-        let currClass = data.classes.find(
-          (oneClass) => oneClass.className === obj.value.className
-        );
-        currClass.report = obj.value.report;
-        currClass.classReport = obj.value.classReport;
-        console.log(data);
-        fetch(`${url}students/${id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((r) => r.json())
-          .then((body) => console.log(body));
-      });
+      .then((body) => console.log(body));
   }
+
+  // function makeStudentPatchRequest(obj, id) {
+  //   fetch(`${url}students/${id}`)
+  //     .then((r) => r.json())
+  //     .then((data) => {
+  //       let currClass = data.classes.find(
+  //         (oneClass) => oneClass.className === obj.value.className
+  //       );
+  //       currClass.report = obj.value.report;
+  //       currClass.classReport = obj.value.classReport;
+  //       console.log(data);
+  //       fetch(`${url}students/${id}`, {
+  //         method: "PATCH",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(data),
+  //       })
+  //         .then((r) => r.json())
+  //         .then((body) => console.log(body));
+  //     });
+  // }
 
   return (
     <>
