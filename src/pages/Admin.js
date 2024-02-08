@@ -33,7 +33,7 @@ function Admin() {
     
     return (
         <>
-          <AddStudentForm {...{classes, students, setStudents, url}} />
+          <AddStudentForm {...{classes, setClasses, students, setStudents, url}} />
           <AdminSearchStudent {...{searchName, setSearchName}} />
           {displayStudents}
         </>

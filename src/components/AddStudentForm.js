@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Checkbox } from "semantic-ui-react";
 
-function AddStudentForm({ classes, students, setStudents, url }) {
+function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -103,7 +103,28 @@ function AddStudentForm({ classes, students, setStudents, url }) {
                     }
                 }));
             });
-    }
+
+            newStudent.classes.forEach(oneClass => {
+                const classToPatch = classes.find(currClass => currClass.className === oneClass.className);
+                fetch(`${url}classes/${classToPatch.id}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        classRoll: [...classToPatch.classRoll, newStudent.name]
+                    })
+                })
+                    .then(r => r.json())
+                    .then(data => {
+                        fetch(`${url}classes`)
+                            .then(r => r.json())
+                            .then(data => {
+                                setClasses(data);
+                            })
+                    });
+            });
+    };
 
     return (
         <>
