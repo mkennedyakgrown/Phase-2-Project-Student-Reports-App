@@ -17,6 +17,7 @@ function App() {
     fetch(`${url}instructors?email=${email}`)
       .then((r) => r.json())
       .then((data) => {
+        console.log(data);
         if (data != []) {
           setUser(data[0]);
           const currUserClasses = classes.filter((obj) =>
@@ -24,6 +25,9 @@ function App() {
           );
           setUserClasses(currUserClasses);
           setIsLoggedIn(true);
+          return true;
+        } else {
+          return false;
         }
       });
   };
@@ -31,13 +35,13 @@ function App() {
     setIsLoggedIn(false);
   };
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      navigate("/");
-    } else {
-      navigate("/login");
-    }
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   if (isLoggedIn) {
+  //     navigate("/");
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // }, [isLoggedIn]);
 
   useEffect(() => {
     fetch(`${url}classes`)
@@ -51,7 +55,7 @@ function App() {
   return (
     <>
       <header className="App-header">
-        <NavBar {...{ logout, isAdmin: user.admin === true }} />
+        <NavBar {...{ logout }} />
       </header>
       <Outlet
         context={{

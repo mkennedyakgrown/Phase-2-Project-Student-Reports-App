@@ -16,27 +16,24 @@ function NavBar({ logout, isAdmin }) {
             >
                 Classes
             </NavLink> */}
-            {isAdmin && (
-                <NavLink
-                    to="/admin"
-                    className="nav-link"
-                >
-                    Admin
-                </NavLink>
-            )}
-            
+            <NavLink
+                to="/admin"
+                className="nav-link"
+            >
+                Admin
+            </NavLink>
             <NavLink
                 to="/reports"
                 className="nav-link"
             >
                 Reports
             </NavLink>
-            <NavLink
+            {/* <NavLink
                 to="/login"
                 className="nav-link"
             >
                 Login
-            </NavLink>
+            </NavLink> */}
             <button onClick={logout}>Logout</button>
         </nav>
     )

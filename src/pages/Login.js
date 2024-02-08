@@ -16,7 +16,10 @@ function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
-    context.login(formData.email);
+    const isUser = context.login(formData.email);
+    if (isUser === false) {
+      console.log("User not found");
+    }
   }
 
   return (
@@ -31,16 +34,6 @@ function Login() {
           onChange={handleChange}
         />
       </div>
-      {/* <label htmlFor="password">Password</label>
-            <div>
-                <input
-                    id="password"
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
-            </div> */}
       <button type="submit">Login</button>
     </form>
   );

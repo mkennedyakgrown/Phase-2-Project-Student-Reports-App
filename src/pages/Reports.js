@@ -36,7 +36,6 @@ function Reports() {
   }
 
   function patchRequest() {
-    console.log(formData);
     formData.forEach((obj) => {
       if (obj.isClass === false) {
         const id = obj.id;
