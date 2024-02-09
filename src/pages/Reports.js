@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import ReportsForm from "../components/ReportsForm";
 
@@ -82,28 +82,6 @@ function Reports() {
       .then((r) => r.json())
       .then((body) => console.log(body));
   }
-
-  // function makeStudentPatchRequest(obj, id) {
-  //   fetch(`${url}students/${id}`)
-  //     .then((r) => r.json())
-  //     .then((data) => {
-  //       let currClass = data.classes.find(
-  //         (oneClass) => oneClass.className === obj.value.className
-  //       );
-  //       currClass.report = obj.value.report;
-  //       currClass.classReport = obj.value.classReport;
-  //       console.log(data);
-  //       fetch(`${url}students/${id}`, {
-  //         method: "PATCH",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(data),
-  //       })
-  //         .then((r) => r.json())
-  //         .then((body) => console.log(body));
-  //     });
-  // }
 
   return (
     <>

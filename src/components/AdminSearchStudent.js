@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Form, FormField, Button } from "semantic-ui-react";
 
 function AdminSearchStudent({ searchName, setSearchName }) {

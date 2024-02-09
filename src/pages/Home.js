@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Outlet, useOutletContext } from "react-router-dom";
 
 function Home() {

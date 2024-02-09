@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import StudentCard from "../components/StudentCard";
 import AdminSearchStudent from "../components/AdminSearchStudent";

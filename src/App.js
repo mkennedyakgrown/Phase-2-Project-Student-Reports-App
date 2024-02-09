@@ -1,8 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import "./App.css";
-import useQuery from "./hooks/useQuery";
 
 function App() {
   const url = "http://localhost:4000/";

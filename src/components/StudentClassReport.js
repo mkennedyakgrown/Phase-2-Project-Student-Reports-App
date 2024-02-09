@@ -1,4 +1,3 @@
-
 import { Card, CardHeader } from 'semantic-ui-react';
 
 function StudentClassReport({ currClass }) {
