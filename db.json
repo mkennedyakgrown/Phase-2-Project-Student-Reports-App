@@ -3,622 +3,112 @@
     {
       "id": 0,
       "name": "Maureen Hughes",
-      "email": "maureenhughes@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "maureenhughes@unisure.com"
     },
     {
       "id": 1,
       "name": "Henrietta Bowen",
-      "email": "henriettabowen@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "henriettabowen@unisure.com"
     },
     {
       "id": 2,
       "name": "Michael Jordan",
-      "email": "michaeljordan@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "michaeljordan@unisure.com"
     },
     {
       "id": 3,
       "name": "Erika Mejia",
-      "email": "erikamejia@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "erikamejia@unisure.com"
     },
     {
       "id": 4,
       "name": "Tracey Burns",
-      "email": "traceyburns@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "traceyburns@unisure.com"
     },
     {
       "id": 5,
       "name": "Head Holmes",
-      "email": "headholmes@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "headholmes@unisure.com"
     },
     {
       "id": 6,
       "name": "Connie Barron",
-      "email": "conniebarron@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "conniebarron@unisure.com"
     },
     {
       "id": 7,
       "name": "Shirley Weber",
-      "email": "shirleyweber@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "shirleyweber@unisure.com"
     },
     {
       "id": 8,
       "name": "Lizzie Harmon",
-      "email": "lizzieharmon@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "lizzieharmon@unisure.com"
     },
     {
       "id": 9,
       "name": "Griffith Sherman",
-      "email": "griffithsherman@unisure.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "report": "",
-          "classReport": "Ballet 3 is a class"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Flex, Leaps and Turns",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "griffithsherman@unisure.com"
     },
     {
       "id": 10,
       "name": "Lessie Buckner",
-      "email": "lessiebuckner@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "Lessie Buckner is in Tap 5",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "lessiebuckner@unisure.com"
     },
     {
       "id": 11,
       "name": "Pope Joseph",
-      "email": "popejoseph@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "popejoseph@unisure.com"
     },
     {
       "id": 12,
       "name": "French Talley",
-      "email": "frenchtalley@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "frenchtalley@unisure.com"
     },
     {
       "id": 13,
       "name": "Clay Medina",
-      "email": "claymedina@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "claymedina@unisure.com"
     },
     {
       "id": 14,
       "name": "Ana Hatfield",
-      "email": "anahatfield@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Hip Hop 8",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Jazz 7",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "anahatfield@unisure.com"
     },
     {
       "id": 15,
       "name": "Tania Cantrell",
-      "email": "taniacantrell@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "taniacantrell@unisure.com"
     },
     {
       "id": 16,
       "name": "Augusta Trevino",
-      "email": "augustatrevino@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "augustatrevino@unisure.com"
     },
     {
       "id": 17,
       "name": "Valerie Holman",
-      "email": "valerieholman@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "valerieholman@unisure.com"
     },
     {
       "id": 18,
       "name": "Graves David",
-      "email": "gravesdavid@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "gravesdavid@unisure.com"
     },
     {
       "id": 19,
       "name": "Barrera Hartman",
-      "email": "josephinetalley@unisure.com",
-      "classes": [
-        {
-          "className": "Tap 5",
-          "report": "",
-          "classReport": "Tap 5 did a lot this year!"
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "report": "",
-          "classReport": ""
-        },
-        {
-          "className": "Belly Dancing 1",
-          "report": "",
-          "classReport": ""
-        }
-      ]
+      "email": "josephinetalley@unisure.com"
     },
     {
       "name": "Matthew Kennedy",
       "email": "danceteacher88@dancers.com",
-      "classes": [
-        {
-          "className": "Ballet 3",
-          "classReport": "Ballet 3 is a class",
-          "report": ""
-        },
-        {
-          "className": "Tap 5",
-          "classReport": "Tap 5 did a lot this year!",
-          "report": ""
-        },
-        {
-          "className": "Int. Ballroom Dance",
-          "classReport": "",
-          "report": ""
-        },
-        {
-          "className": "Ballet Partnering",
-          "report": "",
-          "classReport": ""
-        }
-      ],
       "id": 20
-    }
-  ],
-  "instructors": [
-    {
-      "id": 0,
-      "name": "Floyd Benton",
-      "email": "floydbenton@unisure.com",
-      "classes": [
-        "Ballet 3",
-        "Tap 5"
-      ],
-      "admin": false
     },
     {
-      "id": 1,
-      "name": "Heidi Bowen",
-      "email": "heidibowen@unisure.com",
-      "classes": [
-        "Hip Hop 8",
-        "Int. Ballroom Dance"
-      ],
-      "admin": false
-    },
-    {
-      "id": 2,
-      "name": "Cooper Ferrell",
-      "email": "cooperferrell@unisure.com",
-      "classes": [
-        "Belly Dancing 1",
-        "Jazz 7"
-      ],
-      "admin": false
-    },
-    {
-      "id": 3,
-      "name": "Shelley Vaughn",
-      "email": "shelleyvaughn@unisure.com",
-      "classes": [
-        "Flex, Leaps and Turns",
-        "Ballet Partnering"
-      ],
-      "admin": false
-    },
-    {
-      "id": 19,
-      "name": "Barrera Hartman",
-      "email": "barrerahartman@unisure.com",
-      "classes": [
-        "Tap 5",
-        "Int. Ballroom Dance",
-        "Belly Dancing 1"
-      ],
-      "admin": true
+      "name": "Jason Todd",
+      "email": "nightwing@definitelynotbatman.net",
+      "id": 21
     }
   ],
   "classes": [
@@ -649,7 +139,7 @@
         },
         {
           "name": "Shirley Weber",
-          "report": ""
+          "report": "Shirley is becoming more flexible and patient as a dancer!"
         },
         {
           "name": "Griffith Sherman",
@@ -669,6 +159,10 @@
         },
         {
           "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "",
           "report": ""
         }
       ]
@@ -720,6 +214,10 @@
         },
         {
           "name": "Graves David",
+          "report": ""
+        },
+        {
+          "name": "Jason Todd",
           "report": ""
         }
       ]
@@ -866,6 +364,10 @@
         {
           "name": "Valerie Holman",
           "report": ""
+        },
+        {
+          "name": "Jason Todd",
+          "report": ""
         }
       ]
     },
@@ -959,6 +461,10 @@
         },
         {
           "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "Jason Todd",
           "report": ""
         }
       ]

@@ -3,7 +3,8 @@ import { Checkbox } from "semantic-ui-react";
 
 function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
     const [formData, setFormData] = useState({
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
     });
     const [classOptions, setClassOptions] = useState([
@@ -37,12 +38,20 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
     });
     
 
-    function handleNameChange(e) {
+    function handleFirstNameChange(e) {
         setFormData({
             ...formData,
-            name: e.target.value,
+            firstName: e.target.value,
         });
-    }
+    };
+
+    function handleLastNameChange(e) {
+        setFormData({
+            ...formData,
+            lastName: e.target.value,
+        });
+    };
+    
 
     function handleEmailChange(e) {
         setFormData({
@@ -64,82 +73,103 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const newClasses = classOptions.filter(option => {
-                if (option.checked === true) {
-                    return {
-                        className: option.label
-                    }
-                }
-            });
-        const newStudent = {
-            name: formData.name,
-            email: formData.email,
-            classes: newClasses.map(oneClass => {
-                return {
-                    className: oneClass.label,
-                    classReport: classes[oneClass.id].report,
-                    report: ""
-                }
-            })
-        }
+        const studentName = `${formData.firstName} ${formData.lastName}`;
 
-        fetch(`${url}students`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newStudent),
-        })
-            .then(r => r.json())
-            .then(data => {
-                console.log(data);
-                setStudents([...students, data]);
-                setFormData({
-                    name: "",
-                    email: "",
+        if (students.some((student) => student.name === studentName)) {
+            alert("Student with that name already exists");
+            return
+        } else if (!classOptions.some(option => option.checked === true)) {
+            alert("Must select at least one class");
+            return
+        } else {
+
+            const newClasses = classOptions.filter(option => {
+                    if (option.checked === true) {
+                        return {
+                            className: option.label
+                        }
+                    }
                 });
-                setClassOptions(classOptions.map(option => {
-                    return {
-                        ...option,
-                        checked: false
-                    }
-                }));
-            });
+            const newStudent = {
+                name: studentName,
+                email: formData.email
+            }
 
-        newStudent.classes.forEach(oneClass => {
-            const classToPatch = classes.find(currClass => currClass.className === oneClass.className);
-            fetch(`${url}classes/${classToPatch.id}`, {
-                method: "PATCH",
+            fetch(`${url}students`, {
+                method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({
-                    classRoll: [...classToPatch.classRoll, newStudent.name]
-                })
+                body: JSON.stringify(newStudent),
             })
                 .then(r => r.json())
                 .then(data => {
-                    fetch(`${url}classes`)
-                        .then(r => r.json())
-                        .then(data => {
-                            setClasses(data);
-                        })
+                    setStudents([...students, data]);
+                    setFormData({
+                        firstName: "",
+                        lastName: "",
+                        email: "",
+                    });
+                    setClassOptions(classOptions.map(option => {
+                        return {
+                            ...option,
+                            checked: false
+                        }
+                    }));
+                    console.log(data);
                 });
-        });
+
+            newClasses.forEach(oneClass => {
+                console.log(oneClass);
+                const classToPatch = classes.find(currClass => currClass.className === oneClass.label);
+                console.log(classToPatch);
+                fetch(`${url}classes/${classToPatch.id}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        classRoll: [...classToPatch.classRoll, {
+                            name: studentName,
+                            report: "",
+                        }]
+                    })
+                })
+                    .then(r => r.json())
+                    .then(data => {
+                        console.log(data);
+                        // fetch(`${url}classes`)
+                        //     .then(r => r.json())
+                        //     .then(data => {
+                        //         setClasses(data);
+                        //     })
+                    });
+            });
+        }
     };
 
     return (
         <>
             <h2>Add Student</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="firstName"> First Name</label>
                 <div>
                     <input
-                        id="name"
+                        id="firstName"
                         type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleNameChange}
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleFirstNameChange}
+                    />
+                </div>
+                <label htmlFor="lastName"> Last Name</label>
+                <div>
+                    <input
+                        id="lastName"
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleLastNameChange}
                     />
                 </div>
                 <label htmlFor="email">Email</label>
@@ -153,7 +183,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                     />
                 </div>
                 <label htmlFor="classes">Classes</label>
-                <div>
+                <div id="classes">
                     {classCheckboxes}
                 </div>
                 <button type="submit">Add Student</button>
