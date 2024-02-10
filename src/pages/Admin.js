@@ -20,7 +20,7 @@ function Admin() {
     } = useOutletContext();
     const [searchName, setSearchName] = useState("");
 
-    console.log(students);
+    // filter students for search
     const studentCards = students.filter(student => {
       if (student.name !== undefined) {
         return student.name.toLowerCase().includes(searchName.toLowerCase());
@@ -28,7 +28,7 @@ function Admin() {
     });
 
     const displayStudents = studentCards.map((student, index) => {
-      return <StudentCard key={index} {...{student}}/>;
+      return <StudentCard key={index} {...{student, classes}}/>;
     });
     
     return (

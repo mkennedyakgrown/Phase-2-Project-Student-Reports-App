@@ -1,15 +1,16 @@
 import { Card, CardHeader } from 'semantic-ui-react';
 
-function StudentClassReport({ currClass }) {
+function StudentClassReport({ currClass, student }) {
+    const studentReport = currClass.classRoll.find(obj => obj.name === student.name);
 
     return (
         <Card>
             <Card.Content>
                 <CardHeader>{currClass.className}</CardHeader>
                 <Card.Description>
-                    {currClass.classReport ? currClass.classReport : "No Class Report Written"}
+                    {currClass.report ? currClass.report : "No Class Report Written"}
                     <br/>
-                    {currClass.report ? currClass.report : "No Report Written"}
+                    {studentReport.report ? studentReport.report : "No Report Written"}
                 </Card.Description>
             </Card.Content>
         </Card>
