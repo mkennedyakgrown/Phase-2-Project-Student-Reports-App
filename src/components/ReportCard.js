@@ -2,13 +2,6 @@ import { Input } from "semantic-ui-react";
 import { Label } from "semantic-ui-react";
 
 function ReportCard({ entry, index, handleChange }) {
-  let value = "";
-
-  if (entry.isClass === true) {
-    value = entry.value;
-  } else {
-    value = entry.value.report;
-  }
 
   return (
     <>
@@ -18,7 +11,7 @@ function ReportCard({ entry, index, handleChange }) {
           key={entry.key}
           type="text"
           name={entry.label}
-          value={value || ""}
+          value={entry.value || ""}
           onChange={(e) => handleChange(e, entry, index)}
           fluid
         />

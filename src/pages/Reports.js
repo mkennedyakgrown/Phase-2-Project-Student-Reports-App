@@ -24,34 +24,32 @@ function Reports() {
     if (entry.isClass === true) {
       data[index].value = e.target.value;
     } else {
-      data[index].value.report = e.target.value;
+      data[index].value = e.target.value;
     }
     setFormData(data);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    patchRequest();
-  }
-
-  function patchRequest() {
     formData.forEach((obj) => {
-      if (obj.isClass === false) {
-        const id = obj.id;
-        obj.value.classReport = formData.find(
-          (entry) => entry.label === obj.value.className
-        ).value;
-        makeStudentPatchRequest(obj, id);
-      }
       if (obj.isClass === true) {
         const id = obj.id;
-        console.log(obj);
-        makeClassPatchRequest(obj, id);
+        makeClassPatchRequest(obj, formData, id);
       }
     });
   }
 
-  function makeClassPatchRequest(obj, id) {
+  function makeClassPatchRequest(obj, formData, id) {
+    // get classRoll from formData
+    const classRoll = formData.filter(obj => {
+      return obj.isClass === false && obj.parentClass === id;
+    }).map(student => {
+      return {
+        name: student.name,
+        report: student.value
+      }
+    })
+    // make patch request to update class
     fetch(`${url}classes/${id}`, {
       method: "PATCH",
       headers: {
@@ -59,25 +57,8 @@ function Reports() {
       },
       body: JSON.stringify({
         report: obj.value,
+        classRoll: classRoll,
       }),
-    })
-      .then((r) => r.json())
-      .then((body) => console.log(body));
-  }
-
-  function makeStudentPatchRequest(obj, id) {
-    const currStudent = students.find(student => student.id === id);
-    let currClass = currStudent.classes.find(
-      (oneClass) => oneClass.className === obj.value.className
-    );
-    currClass.report = obj.value.report;
-    currClass.classReport = obj.value.classReport;
-    fetch(`${url}students/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(currStudent),
     })
       .then((r) => r.json())
       .then((body) => console.log(body));

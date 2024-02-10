@@ -9,6 +9,8 @@ function ReportsForm({
   students,
 }) {
   const formEntries = [];
+
+  // on page load or classes change, get and set form data from API
   useEffect(() => {
     classes?.forEach((oneClass) => {
       formEntries.push({
@@ -19,19 +21,14 @@ function ReportsForm({
         name: oneClass.className,
         isClass: true,
       });
-      oneClass.classRoll.map((student) => {
-        const studentObj = students?.find((obj) => obj.name === student);
-        const studentReport = studentObj?.classes.find(
-          (obj) => obj.className === oneClass.className
-        );
-        const label = oneClass.className + student;
-        const name = student;
+      oneClass.classRoll.forEach((student, index) => {
         formEntries.push({
-          key: label,
-          id: studentObj?.id,
-          label: label,
-          value: studentReport,
-          name: name,
+          key: `${oneClass.className}${student.name}`,
+          label: `${oneClass.className}${student.name}`,
+          id: index,
+          parentClass: oneClass.id,
+          value: student.report,
+          name: student.name,
           isClass: false,
         });
       });

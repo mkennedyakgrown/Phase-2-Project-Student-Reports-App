@@ -561,8 +561,8 @@
         },
         {
           "className": "Ballet Partnering",
-          "classReport": "",
-          "report": ""
+          "report": "",
+          "classReport": ""
         }
       ],
       "id": 20
@@ -625,37 +625,103 @@
     {
       "id": 0,
       "className": "Ballet 3",
-      "report": "Ballet 3 is a class",
+      "report": "Ballet 3 is still a class",
       "classRoll": [
-        "Maureen Hughes",
-        "Henrietta Bowen",
-        "Michael Jordan",
-        "Erika Mejia",
-        "Tracey Burns",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman",
-        "Matthew Kennedy"
+        {
+          "name": "Maureen Hughes",
+          "report": "Maureen Hughes is awesome"
+        },
+        {
+          "name": "Henrietta Bowen",
+          "report": "Henrietta"
+        },
+        {
+          "name": "Michael Jordan",
+          "report": ""
+        },
+        {
+          "name": "Erika Mejia",
+          "report": ""
+        },
+        {
+          "name": "Connie Barron",
+          "report": ""
+        },
+        {
+          "name": "Shirley Weber",
+          "report": ""
+        },
+        {
+          "name": "Griffith Sherman",
+          "report": ""
+        },
+        {
+          "name": "Matthew Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Tracey Burns",
+          "report": ""
+        },
+        {
+          "name": "Lizzie Harmon",
+          "report": ""
+        },
+        {
+          "name": "Head Holmes",
+          "report": ""
+        }
       ]
     },
     {
       "id": 1,
       "className": "Tap 5",
-      "report": "Tap 5 did a lot this year!",
+      "report": "",
       "classRoll": [
-        "Lessie Buckner",
-        "Pope Joseph",
-        "French Talley",
-        "Clay Medina",
-        "Ana Hatfield",
-        "Tania Cantrell",
-        "Augusta Trevino",
-        "Valerie Holman",
-        "Graves David",
-        "Barrera Hartman",
-        "Matthew Kennedy"
+        {
+          "name": "Lessie Buckner",
+          "report": ""
+        },
+        {
+          "name": "Pope Joseph",
+          "report": ""
+        },
+        {
+          "name": "French Talley",
+          "report": ""
+        },
+        {
+          "name": "Clay Medina",
+          "report": ""
+        },
+        {
+          "name": "Ana Hatfield",
+          "report": ""
+        },
+        {
+          "name": "Tania Cantrell",
+          "report": ""
+        },
+        {
+          "name": "Augusta Trevino",
+          "report": ""
+        },
+        {
+          "name": "Valerie Holman",
+          "report": ""
+        },
+        {
+          "name": "Barrera Hartman",
+          "report": ""
+        },
+        {
+          "name": "Matthew Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Graves David",
+          "report": ""
+        }
       ]
     },
     {
@@ -663,16 +729,46 @@
       "className": "Hip Hop 8",
       "report": "",
       "classRoll": [
-        "Lessie Buckner",
-        "Pope Joseph",
-        "French Talley",
-        "Clay Medina",
-        "Ana Hatfield",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman"
+        {
+          "name": "Lessie Buckner",
+          "report": ""
+        },
+        {
+          "name": "Pope Joseph",
+          "report": ""
+        },
+        {
+          "name": "French Talley",
+          "report": ""
+        },
+        {
+          "name": "Clay Medina",
+          "report": ""
+        },
+        {
+          "name": "Ana Hatfield",
+          "report": ""
+        },
+        {
+          "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "Connie Barron",
+          "report": ""
+        },
+        {
+          "name": "Shirley Weber",
+          "report": ""
+        },
+        {
+          "name": "Lizzie Harmon",
+          "report": ""
+        },
+        {
+          "name": "Griffith Sherman",
+          "report": ""
+        }
       ]
     },
     {
@@ -680,18 +776,50 @@
       "className": "Int. Ballroom Dance",
       "report": "",
       "classRoll": [
-        "Maureen Hughes",
-        "Henrietta Bowen",
-        "Michael Jordan",
-        "Erika Mejia",
-        "Tracey Burns",
-        "Tania Cantrell",
-        "Augusta Trevino",
-        "Valerie Holman",
-        "Graves David",
-        "Barrera Hartman",
-        "",
-        "Matthew Kennedy"
+        {
+          "name": "Maureen Hughes",
+          "report": ""
+        },
+        {
+          "name": "Henrietta Bowen",
+          "report": ""
+        },
+        {
+          "name": "Michael Jordan",
+          "report": ""
+        },
+        {
+          "name": "Erika Mejia",
+          "report": ""
+        },
+        {
+          "name": "Tracey Burns",
+          "report": ""
+        },
+        {
+          "name": "Tania Cantrell",
+          "report": ""
+        },
+        {
+          "name": "Augusta Trevino",
+          "report": ""
+        },
+        {
+          "name": "Valerie Holman",
+          "report": ""
+        },
+        {
+          "name": "Graves David",
+          "report": ""
+        },
+        {
+          "name": "Barrera Hartman",
+          "report": ""
+        },
+        {
+          "name": "Matthew Kennedy",
+          "report": ""
+        }
       ]
     },
     {
@@ -699,16 +827,46 @@
       "className": "Belly Dancing 1",
       "report": "",
       "classRoll": [
-        "Maureen Hughes",
-        "Henrietta Bowen",
-        "Michael Jordan",
-        "Erika Mejia",
-        "Tracey Burns",
-        "Tania Cantrell",
-        "Augusta Trevino",
-        "Valerie Holman",
-        "Graves David",
-        "Barrera Hartman"
+        {
+          "name": "Maureen Hughes",
+          "report": ""
+        },
+        {
+          "name": "Henrietta Bowen",
+          "report": ""
+        },
+        {
+          "name": "Michael Jordan",
+          "report": ""
+        },
+        {
+          "name": "Erika Mejia",
+          "report": ""
+        },
+        {
+          "name": "Tracey Burns",
+          "report": ""
+        },
+        {
+          "name": "Tania Cantrell",
+          "report": ""
+        },
+        {
+          "name": "Augusta Trevino",
+          "report": ""
+        },
+        {
+          "name": "Graves David",
+          "report": ""
+        },
+        {
+          "name": "Barrera Hartman",
+          "report": ""
+        },
+        {
+          "name": "Valerie Holman",
+          "report": ""
+        }
       ]
     },
     {
@@ -716,16 +874,46 @@
       "className": "Jazz 7",
       "report": "",
       "classRoll": [
-        "Lessie Buckner",
-        "Pope Joseph",
-        "French Talley",
-        "Clay Medina",
-        "Ana Hatfield",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman"
+        {
+          "name": "Lessie Buckner",
+          "report": ""
+        },
+        {
+          "name": "Pope Joseph",
+          "report": ""
+        },
+        {
+          "name": "French Talley",
+          "report": ""
+        },
+        {
+          "name": "Clay Medina",
+          "report": ""
+        },
+        {
+          "name": "Ana Hatfield",
+          "report": ""
+        },
+        {
+          "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "Connie Barron",
+          "report": ""
+        },
+        {
+          "name": "Shirley Weber",
+          "report": ""
+        },
+        {
+          "name": "Griffith Sherman",
+          "report": ""
+        },
+        {
+          "name": "Lizzie Harmon",
+          "report": ""
+        }
       ]
     },
     {
@@ -733,16 +921,46 @@
       "className": "Flex, Leaps and Turns",
       "report": "",
       "classRoll": [
-        "Maureen Hughes",
-        "Henrietta Bowen",
-        "Michael Jordan",
-        "Erika Mejia",
-        "Tracey Burns",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman"
+        {
+          "name": "Maureen Hughes",
+          "report": ""
+        },
+        {
+          "name": "Henrietta Bowen",
+          "report": ""
+        },
+        {
+          "name": "Michael Jordan",
+          "report": ""
+        },
+        {
+          "name": "Erika Mejia",
+          "report": ""
+        },
+        {
+          "name": "Tracey Burns",
+          "report": ""
+        },
+        {
+          "name": "Connie Barron",
+          "report": ""
+        },
+        {
+          "name": "Shirley Weber",
+          "report": ""
+        },
+        {
+          "name": "Lizzie Harmon",
+          "report": ""
+        },
+        {
+          "name": "Griffith Sherman",
+          "report": ""
+        },
+        {
+          "name": "Head Holmes",
+          "report": ""
+        }
       ]
     },
     {
@@ -750,17 +968,50 @@
       "className": "Ballet Partnering",
       "report": "",
       "classRoll": [
-        "Lessie Buckner",
-        "Pope Joseph",
-        "French Talley",
-        "Clay Medina",
-        "Ana Hatfield",
-        "Head Holmes",
-        "Connie Barron",
-        "Shirley Weber",
-        "Lizzie Harmon",
-        "Griffith Sherman",
-        "Matthew Kennedy"
+        {
+          "name": "Lessie Buckner",
+          "report": ""
+        },
+        {
+          "name": "French Talley",
+          "report": ""
+        },
+        {
+          "name": "Clay Medina",
+          "report": ""
+        },
+        {
+          "name": "Ana Hatfield",
+          "report": ""
+        },
+        {
+          "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "Connie Barron",
+          "report": ""
+        },
+        {
+          "name": "Shirley Weber",
+          "report": ""
+        },
+        {
+          "name": "Lizzie Harmon",
+          "report": ""
+        },
+        {
+          "name": "Griffith Sherman",
+          "report": ""
+        },
+        {
+          "name": "Matthew Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Pope Joseph",
+          "report": ""
+        }
       ]
     }
   ]

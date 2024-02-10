@@ -14,6 +14,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
         }
     ]);
 
+    // on load and when classes change, set classOptions
     useEffect(() => {
         const options = classes.map((currClass) => ({
             id: currClass.id,
@@ -23,6 +24,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
         setClassOptions(options);
     }, [classes])
 
+    // render class checkboxes
     const classCheckboxes = classOptions.map((option) => {
         return (
             <Checkbox
@@ -104,26 +106,26 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                 }));
             });
 
-            newStudent.classes.forEach(oneClass => {
-                const classToPatch = classes.find(currClass => currClass.className === oneClass.className);
-                fetch(`${url}classes/${classToPatch.id}`, {
-                    method: "PATCH",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        classRoll: [...classToPatch.classRoll, newStudent.name]
-                    })
+        newStudent.classes.forEach(oneClass => {
+            const classToPatch = classes.find(currClass => currClass.className === oneClass.className);
+            fetch(`${url}classes/${classToPatch.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    classRoll: [...classToPatch.classRoll, newStudent.name]
                 })
-                    .then(r => r.json())
-                    .then(data => {
-                        fetch(`${url}classes`)
-                            .then(r => r.json())
-                            .then(data => {
-                                setClasses(data);
-                            })
-                    });
-            });
+            })
+                .then(r => r.json())
+                .then(data => {
+                    fetch(`${url}classes`)
+                        .then(r => r.json())
+                        .then(data => {
+                            setClasses(data);
+                        })
+                });
+        });
     };
 
     return (
