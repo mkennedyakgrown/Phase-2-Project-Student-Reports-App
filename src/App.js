@@ -30,17 +30,6 @@ function App() {
         }
       });
   };
-  const logout = () => {
-    setIsLoggedIn(false);
-  };
-
-  // useEffect(() => {
-  //   if (isLoggedIn) {
-  //     navigate("/");
-  //   } else {
-  //     navigate("/login");
-  //   }
-  // }, [isLoggedIn]);
 
   useEffect(() => {
     fetch(`${url}classes`)
@@ -54,21 +43,14 @@ function App() {
   return (
     <>
       <header className="App-header">
-        <NavBar {...{ logout }} />
+        <NavBar />
       </header>
       <Outlet
         context={{
-          login,
-          isLoggedIn,
-          setIsLoggedIn,
           classes,
           setClasses,
           students,
           setStudents,
-          user,
-          setUser,
-          userClasses,
-          setUserClasses,
           url,
         }}
       />

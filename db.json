@@ -109,6 +109,16 @@
       "name": "Jason Todd",
       "email": "nightwing@definitelynotbatman.net",
       "id": 21
+    },
+    {
+      "name": "Damian Wayne",
+      "email": "robynn@absolutelyalsonotbatman.com",
+      "id": 22
+    },
+    {
+      "name": "Dick Greyson",
+      "email": "thefirstrobin@imightbebatmansomeday.com",
+      "id": 23
     }
   ],
   "classes": [
@@ -159,6 +169,10 @@
         },
         {
           "name": "Head Holmes",
+          "report": ""
+        },
+        {
+          "name": "Dick Greyson",
           "report": ""
         }
       ]

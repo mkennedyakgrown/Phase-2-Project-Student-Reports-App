@@ -4,34 +4,24 @@ import ReportsForm from "../components/ReportsForm";
 
 function Reports() {
   const {
-    login,
-    isLoggedIn,
-    setIsLoggedIn,
     classes,
     setClasses,
     students,
     setStudents,
-    user,
-    setUser,
-    userClasses,
-    setUserClasses,
     url,
   } = useOutletContext();
   const [formData, setFormData] = useState([]);
 
   function handleChange(e, entry, index) {
     const data = [...formData];
-    if (entry.isClass === true) {
-      data[index].value = e.target.value;
-    } else {
-      data[index].value = e.target.value;
-    }
+    data[index].value = e.target.value;
     setFormData(data);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     formData.forEach((obj) => {
+      // only patch classes
       if (obj.isClass === true) {
         const id = obj.id;
         makeClassPatchRequest(obj, formData, id);
@@ -62,7 +52,7 @@ function Reports() {
     })
       .then((r) => r.json())
       .then((body) => {
-        console.log(body);
+        // update classes
         setClasses(oneClass => {
           return oneClass.map(obj => {
             if (obj.id === id) {

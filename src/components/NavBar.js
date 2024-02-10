@@ -10,12 +10,6 @@ function NavBar({ logout, isAdmin }) {
             >
                 Home
             </NavLink>
-            {/* <NavLink
-                to="/classes"
-                className="nav-link"
-            >
-                Classes
-            </NavLink> */}
             <NavLink
                 to="/admin"
                 className="nav-link"
@@ -28,12 +22,6 @@ function NavBar({ logout, isAdmin }) {
             >
                 Reports
             </NavLink>
-            {/* <NavLink
-                to="/login"
-                className="nav-link"
-            >
-                Login
-            </NavLink> */}
             <button onClick={logout}>Logout</button>
         </nav>
     )

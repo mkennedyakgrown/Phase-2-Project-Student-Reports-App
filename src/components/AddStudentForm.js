@@ -138,11 +138,13 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                     .then(r => r.json())
                     .then(data => {
                         console.log(data);
-                        // fetch(`${url}classes`)
-                        //     .then(r => r.json())
-                        //     .then(data => {
-                        //         setClasses(data);
-                        //     })
+                        setClasses(classes.map(currClass => {
+                            if (currClass.id === classToPatch.id) {
+                                return data
+                            } else {
+                                return currClass
+                            }
+                        }))
                     });
             });
         }

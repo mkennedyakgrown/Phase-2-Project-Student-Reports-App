@@ -6,16 +6,10 @@ import AddStudentForm from "../components/AddStudentForm";
 
 function Admin() {
     const {
-        login,
-        isLoggedIn,
         classes,
         setClasses,
         students,
         setStudents,
-        user,
-        setUser,
-        userClasses,
-        setUserClasses,
         url
     } = useOutletContext();
     const [searchName, setSearchName] = useState("");
