@@ -119,7 +119,7 @@
       "classRoll": [
         {
           "name": "Maureen Hughes",
-          "report": "Maureen Hughes is awesome"
+          "report": "Maureen Hughes is awesome, and she dances really well!"
         },
         {
           "name": "Henrietta Bowen",
@@ -127,15 +127,15 @@
         },
         {
           "name": "Michael Jordan",
-          "report": ""
+          "report": "Michael shares his name with someone really cool"
         },
         {
           "name": "Erika Mejia",
-          "report": ""
+          "report": "Erika Rocks!"
         },
         {
           "name": "Connie Barron",
-          "report": ""
+          "report": "Connie is dancing well!"
         },
         {
           "name": "Shirley Weber",
@@ -160,10 +160,6 @@
         {
           "name": "Head Holmes",
           "report": ""
-        },
-        {
-          "name": "",
-          "report": ""
         }
       ]
     },
@@ -174,7 +170,7 @@
       "classRoll": [
         {
           "name": "Lessie Buckner",
-          "report": ""
+          "report": "Lessie"
         },
         {
           "name": "Pope Joseph",

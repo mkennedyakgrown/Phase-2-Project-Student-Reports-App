@@ -61,7 +61,18 @@ function Reports() {
       }),
     })
       .then((r) => r.json())
-      .then((body) => console.log(body));
+      .then((body) => {
+        console.log(body);
+        setClasses(oneClass => {
+          return oneClass.map(obj => {
+            if (obj.id === id) {
+              return body
+            } else {
+              return obj
+            };
+          });
+        });
+      });
   }
 
   return (
