@@ -1,6 +1,7 @@
 import { Input } from "semantic-ui-react";
 import { Label } from "semantic-ui-react";
 
+// create individual card for report text entries
 function ReportCard({ entry, index, handleChange }) {
 
   return (

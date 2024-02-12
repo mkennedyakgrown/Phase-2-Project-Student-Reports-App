@@ -79,7 +79,6 @@ function Reports() {
                 setFormData,
                 handleChange,
                 classes,
-                students,
               }}
             />
           }

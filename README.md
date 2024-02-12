@@ -1,7 +1,8 @@
 # Phase-2-Project-Student-Reports-App
+This is a one-page app that allows users to write and save progress reports for 
 
 ## Overview
-Provide a brief description of what the project does and its main features.
+
 
 ## Installation
 Explain how to install the project on a local machine, including any dependencies or setup steps.

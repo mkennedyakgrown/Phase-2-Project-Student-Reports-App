@@ -2,6 +2,7 @@ import { useState } from "react";
 import StudentClassReport from "./StudentClassReport";
 import { Accordion, Card } from "semantic-ui-react";
 
+// create individual card for student
 function StudentCard({ student, classes }) {
   const [isActive, setIsActive] = useState(false);
 
@@ -9,19 +10,15 @@ function StudentCard({ student, classes }) {
     setIsActive(!isActive);
   };
 
+  // filter classes for student
   const displayClasses = classes.filter(currClass => {
     return currClass.classRoll.some(obj => obj.name === student.name);
   }).map(currClass => {
+    // create report for each class
     return (
         <StudentClassReport key={currClass.id} {...{ currClass, student }} />
     )
   });
-
-  // const displayClasses = student.classes.map((currClass, index) => {
-  //   return (
-  //       <StudentClassReport key={index} {...{ currClass, classes }} />
-  //   )
-  // })
 
     return (
         <Card onClick={handleClick}>

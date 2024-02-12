@@ -1,5 +1,6 @@
 import { Card, CardHeader } from 'semantic-ui-react';
 
+// create report for each class, combining class report and student report for that class
 function StudentClassReport({ currClass, student }) {
     const studentReport = currClass.classRoll.find(obj => obj.name === student.name);
 

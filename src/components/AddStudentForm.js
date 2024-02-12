@@ -75,14 +75,16 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
         e.preventDefault();
         const studentName = `${formData.firstName} ${formData.lastName}`;
 
+        // check if student already exists
         if (students.some((student) => student.name === studentName)) {
             alert("Student with that name already exists");
             return
         } else if (!classOptions.some(option => option.checked === true)) {
+            // check if at least one class is selected
             alert("Must select at least one class");
             return
         } else {
-
+            // check which classes have been selected
             const newClasses = classOptions.filter(option => {
                     if (option.checked === true) {
                         return {
@@ -95,6 +97,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                 email: formData.email
             }
 
+            // add student to database
             fetch(`${url}students`, {
                 method: "POST",
                 headers: {
@@ -104,6 +107,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
             })
                 .then(r => r.json())
                 .then(data => {
+                    // update students state, clear form data and reset class checkboxes
                     setStudents([...students, data]);
                     setFormData({
                         firstName: "",
@@ -116,13 +120,13 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                             checked: false
                         }
                     }));
-                    console.log(data);
                 });
 
+            // add student to classes
             newClasses.forEach(oneClass => {
-                console.log(oneClass);
+                // get class object to patch
                 const classToPatch = classes.find(currClass => currClass.className === oneClass.label);
-                console.log(classToPatch);
+
                 fetch(`${url}classes/${classToPatch.id}`, {
                     method: "PATCH",
                     headers: {
@@ -137,7 +141,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
                 })
                     .then(r => r.json())
                     .then(data => {
-                        console.log(data);
+                        // update classes state
                         setClasses(classes.map(currClass => {
                             if (currClass.id === classToPatch.id) {
                                 return data

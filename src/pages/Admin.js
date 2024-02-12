@@ -4,6 +4,7 @@ import StudentCard from "../components/StudentCard";
 import AdminSearchStudent from "../components/AdminSearchStudent";
 import AddStudentForm from "../components/AddStudentForm";
 
+// create admin page for adding students, searching students, and viewing students' reports
 function Admin() {
     const {
         classes,
@@ -21,6 +22,7 @@ function Admin() {
       }
     });
 
+    // create cards for students
     const displayStudents = studentCards.map((student, index) => {
       return <StudentCard key={index} {...{student, classes}}/>;
     });

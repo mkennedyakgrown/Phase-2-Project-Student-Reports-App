@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import ReportCard from "./ReportCard";
 
+// create form for report text entries, handle change and submit
 function ReportsForm({
   formData,
   setFormData,
   handleChange,
   classes,
-  students,
 }) {
   const formEntries = [];
 
