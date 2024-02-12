@@ -1,29 +1,31 @@
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+import { MenuItem, Menu } from "semantic-ui-react";
 
-function NavBar({ logout, isAdmin }) {
+function NavBar() {
     return (
-        <nav>
-            <NavLink
+        <Menu>
+            <MenuItem
+                as={NavLink}
                 to="/"
                 className="nav-link"
             >
                 Home
-            </NavLink>
-            <NavLink
+            </MenuItem>
+            <MenuItem
+                as={NavLink}
                 to="/admin"
                 className="nav-link"
             >
                 Admin
-            </NavLink>
-            <NavLink
+            </MenuItem>
+            <MenuItem
+                as={NavLink}
                 to="/reports"
                 className="nav-link"
             >
                 Reports
-            </NavLink>
-            <button onClick={logout}>Logout</button>
-        </nav>
+            </MenuItem>
+        </Menu>
     )
 }
 
