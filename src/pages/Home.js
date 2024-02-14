@@ -7,7 +7,6 @@ function Home() {
     <>
       <main>
         <h1>Welcome to the Classroom! Use the NavBar above to navigate.</h1>
-        <Outlet context={context} />
       </main>
     </>
   );
