@@ -21,7 +21,7 @@ function StudentCard({ student, classes }) {
   });
 
     return (
-        <Card onClick={handleClick}>
+        <Card onClick={handleClick} fluid>
           <Card.Content>
             <Card.Header>{student.name}</Card.Header>
             <Card.Meta>{student.email}</Card.Meta>

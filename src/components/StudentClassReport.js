@@ -5,7 +5,7 @@ function StudentClassReport({ currClass, student }) {
     const studentReport = currClass.classRoll.find(obj => obj.name === student.name);
 
     return (
-        <Card>
+        <Card fluid>
             <Card.Content>
                 <CardHeader>{currClass.className}</CardHeader>
                 <Card.Description>
