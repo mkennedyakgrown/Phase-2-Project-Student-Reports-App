@@ -156,8 +156,7 @@ function AddStudentForm({ classes, setClasses, students, setStudents, url }) {
 
     return (
         <>
-            <h2>Add Student</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} align="center">
                 <label htmlFor="firstName"> First Name</label>
                 <div>
                     <input

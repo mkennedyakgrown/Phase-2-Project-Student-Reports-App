@@ -30,7 +30,9 @@ function Admin() {
     
     return (
         <>
+          <Divider horizontal style={{textAlign: "center"}} >Add a Student</Divider>
           <AddStudentForm {...{classes, setClasses, students, setStudents, url}} />
+          <Divider horizontal style={{textAlign: "center"}} >Search Students</Divider>
           <AdminSearchStudent {...{searchName, setSearchName}} />
           <Divider />
           {displayStudents}
