@@ -119,6 +119,11 @@
       "name": "Dick Greyson",
       "email": "thefirstrobin@imightbebatmansomeday.com",
       "id": 23
+    },
+    {
+      "name": "Brian Johnson",
+      "email": "bryj@email.net",
+      "id": 24
     }
   ],
   "classes": [
@@ -137,7 +142,7 @@
         },
         {
           "name": "Michael Jordan",
-          "report": ""
+          "report": "Michael has been working very hard in Ballet 3!"
         },
         {
           "name": "Erika Mejia",
@@ -173,6 +178,10 @@
         },
         {
           "name": "Dick Greyson",
+          "report": ""
+        },
+        {
+          "name": "Brian Johnson",
           "report": ""
         }
       ]
