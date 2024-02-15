@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ReportCard from "./ReportCard";
+import { Divider } from "semantic-ui-react";
 
 // create form for report text entries, handle change and submit
 function ReportsForm({
@@ -37,6 +38,21 @@ function ReportsForm({
   }, [classes]);
 
   const reports = formData?.map((entry, index) => {
+    if (entry.isClass) {
+      return (
+        <>
+          <Divider horizontal>{`Class: ${entry.label}`}</Divider>
+          <ReportCard
+            key={entry.key}
+            {...{
+              entry,
+              index,
+              handleChange,
+            }}
+          />
+        </>
+      );
+    }
     return (
       <ReportCard
         key={entry.key}

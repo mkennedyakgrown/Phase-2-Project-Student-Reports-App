@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import StudentCard from "../components/StudentCard";
 import AdminSearchStudent from "../components/AdminSearchStudent";
 import AddStudentForm from "../components/AddStudentForm";
+import { Divider } from "semantic-ui-react";
 
 // create admin page for adding students, searching students, and viewing students' reports
 function Admin() {
@@ -31,6 +32,7 @@ function Admin() {
         <>
           <AddStudentForm {...{classes, setClasses, students, setStudents, url}} />
           <AdminSearchStudent {...{searchName, setSearchName}} />
+          <Divider />
           {displayStudents}
         </>
     )
