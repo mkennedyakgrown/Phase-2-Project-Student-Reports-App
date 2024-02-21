@@ -139,6 +139,11 @@
       "name": "Mariam Webster",
       "email": "mweb@longbooks.dict",
       "id": 27
+    },
+    {
+      "name": "John Stuart",
+      "email": "arcitech1@glantern.org",
+      "id": 28
     }
   ],
   "classes": [
@@ -177,7 +182,7 @@
         },
         {
           "name": "Matthew Kennedy",
-          "report": ""
+          "report": "Matthew has been trying his best, and it really shows in his dancing. He works through class to learn each new skill!"
         },
         {
           "name": "Tracey Burns",
@@ -268,6 +273,10 @@
         },
         {
           "name": "Mariam Webster",
+          "report": ""
+        },
+        {
+          "name": "John Stuart",
           "report": ""
         }
       ]
@@ -480,6 +489,10 @@
         },
         {
           "name": "Johnathan Winters",
+          "report": ""
+        },
+        {
+          "name": "John Stuart",
           "report": ""
         }
       ]
