@@ -1,8 +1,6 @@
-import { Outlet, useOutletContext } from "react-router-dom";
 import { Header } from "semantic-ui-react";
 
 function Home() {
-  const context = useOutletContext();
 
   return (
     <>
