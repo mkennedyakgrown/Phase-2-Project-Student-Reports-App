@@ -124,13 +124,28 @@
       "name": "Brian Johnson",
       "email": "bryj@email.net",
       "id": 24
+    },
+    {
+      "name": "Matt Kennedy",
+      "email": "mk@emial.com",
+      "id": 25
+    },
+    {
+      "name": "Johnathan Winters",
+      "email": "jwinters@funkgod.mus",
+      "id": 26
+    },
+    {
+      "name": "Mariam Webster",
+      "email": "mweb@longbooks.dict",
+      "id": 27
     }
   ],
   "classes": [
     {
       "id": 0,
       "className": "Ballet 3",
-      "report": "Ballet 3 is still a class",
+      "report": "Ballet 3 has had an amazing year! We've worked on beginning Port de Bras, Level 3 Barre combinations, and we've started learning Pirouettes!",
       "classRoll": [
         {
           "name": "Maureen Hughes",
@@ -142,7 +157,7 @@
         },
         {
           "name": "Michael Jordan",
-          "report": "Michael has been working very hard in Ballet 3!"
+          "report": "Michael has been doing great in Ballet!"
         },
         {
           "name": "Erika Mejia",
@@ -182,6 +197,14 @@
         },
         {
           "name": "Brian Johnson",
+          "report": ""
+        },
+        {
+          "name": "Matt Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Mariam Webster",
           "report": ""
         }
       ]
@@ -238,6 +261,14 @@
         {
           "name": "Jason Todd",
           "report": ""
+        },
+        {
+          "name": "Johnathan Winters",
+          "report": ""
+        },
+        {
+          "name": "Mariam Webster",
+          "report": ""
         }
       ]
     },
@@ -284,6 +315,14 @@
         },
         {
           "name": "Griffith Sherman",
+          "report": ""
+        },
+        {
+          "name": "Matt Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Johnathan Winters",
           "report": ""
         }
       ]
@@ -335,6 +374,10 @@
         },
         {
           "name": "Matthew Kennedy",
+          "report": ""
+        },
+        {
+          "name": "Matt Kennedy",
           "report": ""
         }
       ]
@@ -433,6 +476,10 @@
         },
         {
           "name": "Lizzie Harmon",
+          "report": ""
+        },
+        {
+          "name": "Johnathan Winters",
           "report": ""
         }
       ]
@@ -535,6 +582,10 @@
         },
         {
           "name": "Pope Joseph",
+          "report": ""
+        },
+        {
+          "name": "Mariam Webster",
           "report": ""
         }
       ]

@@ -20,6 +20,8 @@ function Admin() {
     const studentCards = students.filter(student => {
       if (student.name !== undefined) {
         return student.name.toLowerCase().includes(searchName.toLowerCase());
+      } else {
+        return false;
       }
     });
 
